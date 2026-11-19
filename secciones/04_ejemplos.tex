@@ -1,0 +1,40 @@
+\section{Ejemplos}
+
+
+\begin{frame}{Aplicación: el problema de Basilea (I)}
+    Sea $S_n(x)=\displaystyle\sum_{k=1}^n\frac{\sin kx}{k}$ en $[0,\pi]$. Por la teoría de series de Fourier,
+    \[
+        S_n(x)\to\frac{\pi-x}{2}\quad(0<x\le\pi),\qquad S_n(0)=0.
+    \]
+    El límite es discontinuo en $0$: la convergencia \textbf{no es uniforme}.
+
+    \vspace{0.15cm}
+    \textbf{Cota uniforme.} Sea $x\in(0,\pi]$ y $m=\lfloor1/x\rfloor+1$.
+    \begin{itemize}
+        \small
+        \item Si $k<m$: $\abs{\sin kx}/k\le x$, y hay a lo sumo $1/x$ términos. Suman $\le1$.
+        \item Si $k\ge m$: por la desigualdad de Abel, con $\frac1m<x$ y $\sin\frac{x}{2}\ge\frac{x}{\pi}$,
+        \[
+            \abs{\sum_{k=m}^n\frac{\sin kx}{k}}\le\frac1m\cdot\frac{1}{\sin(x/2)}\le x\cdot\frac{\pi}{x}=\pi.
+        \]
+    \end{itemize}
+    Así, $\abs{S_n(x)}\le1+\pi$ para todo $n$ y todo $x\in[0,\pi]$.
+\end{frame}
+
+\begin{frame}{Aplicación: el problema de Basilea (II)}
+    Por el teorema de Arzelà podemos integrar término a término:
+    \[
+        \sum_{k=1}^\infty\frac{1-(-1)^k}{k^2}
+        =\lim_{n\to\infty}\int_0^\pi S_n(x)\,dx
+        =\int_0^\pi\frac{\pi-x}{2}\,dx=\frac{\pi^2}{4}.
+    \]
+    Solo sobreviven los términos con $k$ impar, y cada uno aporta $2/k^2$:
+    \[
+        \sum_{k\text{ impar}}\frac{1}{k^2}=\frac{\pi^2}{8}.
+    \]
+    Separando pares e impares, $\zeta(2)=\dfrac{\pi^2}{8}+\dfrac{\zeta(2)}{4}$, y por tanto
+    \[
+        \boxed{\ \zeta(2)=\sum_{k=1}^\infty\frac{1}{k^2}=\frac{\pi^2}{6}\ }
+    \]
+\end{frame}
+

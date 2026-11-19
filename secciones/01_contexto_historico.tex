@@ -1,0 +1,22 @@
+\section{Contexto}
+
+\begin{frame}{El problema: intercambiar límite e integral}
+    Si $f_n \to f$ en $[a,b]$, ¿cuándo se cumple
+    \[
+        \lim_{n\to\infty}\int_a^b f_n(x)\,dx = \int_a^b \lim_{n\to\infty} f_n(x)\,dx\,?
+    \]
+    \begin{itemize}
+        \item La \textbf{convergencia uniforme} es suficiente:
+        \[
+            \abs{\int_a^b f_n-\int_a^b f}\le (b-a)\sup_{x\in[a,b]}\abs{f_n(x)-f(x)}.
+        \]
+        \item Pero es demasiado exigente: $x^n$ no converge uniformemente en $[0,1]$ y aun así $\int_0^1 x^n\,dx\to 0=\int_0^1 \lim_{n\to\infty} x^n\,dx$.
+        \item La \textbf{convergencia puntual} por sí sola no basta.
+        \item \alert{Arzelà:} basta la convergencia puntual con una cota uniforme, si el límite es integrable.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Más contexto}
+    Tal vez contexto historico, motivación y demás
+\end{frame}

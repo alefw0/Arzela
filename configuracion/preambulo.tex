@@ -1,0 +1,49 @@
+% Paquetes base
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Tema Beamer
+\usetheme{Madrid}
+\usecolortheme{dolphin}
+\setbeamertemplate{navigation symbols}{}
+
+% Colores
+\definecolor{myblue}{RGB}{22,76,138}
+\definecolor{mygreen}{RGB}{22,120,90}
+\definecolor{myorange}{RGB}{210,130,40}
+
+\setbeamercolor{title}{fg=white, bg=myblue!80}
+\setbeamercolor{frametitle}{fg=myblue}
+\setbeamercolor{structure}{fg=myblue}
+\setbeamercolor{block title}{fg=white,bg=myblue}
+\setbeamercolor{block body}{fg=black,bg=blue!5}
+\setbeamercolor{alerted text}{fg=myorange}
+
+% Ajustes de texto
+\setlength{\parskip}{0.25em}
+\setbeamertemplate{itemize item}{\color{myblue}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{mygreen}$\bullet$}
+
+% Portadilla por seccion
+\setbeamertemplate{section page}
+{
+    \centering
+    \vspace{1.5cm}
+    {\usebeamerfont{section title}\usebeamercolor[fg]{section title}\insertsection\par}
+}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+}
